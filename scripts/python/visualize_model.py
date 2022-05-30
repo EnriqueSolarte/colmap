@@ -190,7 +190,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Visualize COLMAP binary and text models")
     parser.add_argument("--input_model", required=True, help="path to input model folder")
     parser.add_argument("--input_format", choices=[".bin", ".txt"],
-                        help="input model format", default="")
+                        help="input model format", default=".bin")
     args = parser.parse_args()
     return args
 
@@ -209,7 +209,7 @@ def main():
     # display using Open3D visualization tools
     model.create_window()
     model.add_points()
-    model.add_cameras(scale=0.25)
+    model.add_cameras(scale=1)
     model.show()
 
 

@@ -32,7 +32,7 @@
 cmake_minimum_required(VERSION 3.0)
 
 project(COLMAP)
-
+set(CMAKE_CXX_STANDARD 17)
 set(COLMAP_VERSION "3.8")
 set(COLMAP_VERSION_NUMBER "3800")
 
@@ -88,7 +88,7 @@ if(OPENMP_ENABLED)
 endif()
 
 find_package(Ceres REQUIRED)
-
+message(STATUS Ceres version ${Ceres_VERSION})
 find_package(Boost REQUIRED COMPONENTS
              program_options
              filesystem
