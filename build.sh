@@ -42,9 +42,3 @@ cd build
 cmake ..
 make -j4
 sudo make install
-# mkdir build
-# cd build
-
-# make -j4 
-# sudo make install
-
