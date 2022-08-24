@@ -19,13 +19,10 @@ sudo apt-get install \
     libglew-dev \
     qtbase5-dev \
     libqt5opengl5-dev \
-    libcgal-dev
-
-#! Under Ubuntu 16.04/18.04 
-#! the CMake configuration scripts of CGAL are broken 
-# ! and you must also install the CGAL Qt5 package:
-sudo apt-get install libcgal-qt5-dev
-
+    libcgal-dev \
+    libcgal-qt5-dev \
+    libatlas-base-dev \
+    libsuitesparse-dev
 
 # ! building Ceres lib 
 cd ceres_2.1.0
@@ -36,7 +33,7 @@ make -j4
 sudo make install
 
 # ! Building COLMAP
-cd .. 
+cd ../..
 mkdir build
 cd build
 cmake ..
